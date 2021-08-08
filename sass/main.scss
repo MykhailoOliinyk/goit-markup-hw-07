@@ -11,8 +11,14 @@
 @import './components/modal-button';
 @import './components/social-list';
 @import './components/logo';
+@import './components/footer-forma';
+@import './components/filtr-portfolio';
+@import './components/backdrop';
+@import './components/modal-window';
+@import './components/modal-form';
 
 //LAYOUT
+
 @import './layout/header';
 @import './layout/heroi';
 @import './layout/features';
@@ -20,3 +26,4 @@
 @import './layout/command';
 @import './layout/clients';
 @import './layout/footer';
+@import './layout/portfolio';
