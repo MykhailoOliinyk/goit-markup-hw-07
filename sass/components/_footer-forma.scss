@@ -24,11 +24,13 @@
   fill: var(--font-color);
   cursor: pointer;
   transition: background-color var(--timing-function) var(--effect-duration);
+
+  &:focus,
+  &:hover {
+    background-color: #188ce8;
+  }
 }
-.submit-post:focus,
-.submit-post:hover {
-  background-color: #188ce8;
-}
+
 .send-icon {
   vertical-align: middle;
   width: 24px;
@@ -50,9 +52,9 @@
   vertical-align: middle;
 
   transition: color var(--timing-function) var(--effect-duration);
-}
 
-.post-input:focus,
-.post-input:hover {
-  color: var(--font-color);
+  &:focus,
+  &:hover {
+    color: var(--font-color);
+  }
 }

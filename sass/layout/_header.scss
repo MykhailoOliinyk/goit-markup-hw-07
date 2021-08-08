@@ -10,6 +10,7 @@
 }
 
 /* Шапка  Navigation */
+
 .navigation {
   display: flex;
   align-items: center;
@@ -33,22 +34,27 @@
   color: var(--title-text-color);
 
   transition: color var(--timing-function) var(--effect-duration);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
-.current::after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  border-radius: 2px;
-  bottom: 0;
-}
-.meny-link:hover,
-.meny-link:focus,
+
 .current {
   color: var(--accent-color);
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    border-radius: 2px;
+    bottom: 0;
+  }
 }
 
 /* шапка контакты */
@@ -57,6 +63,11 @@
   fill: currentColor;
 
   transition: fill var(--timing-function) var(--effect-duration);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .contakts-block {
@@ -78,6 +89,11 @@
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   transition: color var(--timing-function) var(--effect-duration);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .contakts-tel {
   display: flex;
@@ -89,17 +105,9 @@
   color: var(--primary-text-color);
 
   transition: color var(--timing-function) var(--effect-duration);
-}
-.contakts-mail:hover,
-.contakts-mail:focus {
-  color: var(--accent-color);
-}
-.contakts-tel:hover,
-.contakts-tel:focus {
-  color: var(--accent-color);
-}
 
-.header-icon:hover,
-.header-icon:focus {
-  fill: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }

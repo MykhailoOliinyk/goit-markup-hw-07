@@ -37,11 +37,12 @@
   transition: border-color var(--timing-function) var(--effect-duration),
     outline var(--timing-function) var(--effect-duration);
   cursor: pointer;
-}
-.modal-form-input:focus,
-.modal-form-input:hover {
-  outline: none;
-  border-color: var(--accent-color);
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-form-icon {
@@ -51,11 +52,11 @@
   transform: translateY(-50%);
   display: block;
   transition: fill var(--timing-function) var(--effect-duration);
-}
 
-.modal-form-input:focus + .modal-form-icon,
-.modal-form-input:hover + .modal-form-icon {
-  fill: var(--accent-color);
+  .modal-form-input:focus + &,
+  .modal-form-input:hover + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal-form-message {
@@ -73,26 +74,15 @@
   resize: none;
   cursor: pointer;
   transition: border-color var(--timing-function) var(--effect-duration);
-}
 
-.modal-form-message::placeholder {
-  /* text-transform: uppercase; */
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-form-message:focus,
-.modal-form-message:hover {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url(../images/svg/check.svg);
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-size: cover;
-  background-position: center;
-  background-origin: border-box;
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .modal-form-checkbox-label {
@@ -101,18 +91,27 @@
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 30px;
-}
 
-.modal-form-checkbox-label::before {
-  display: inline-block;
-  content: '';
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--title-text-color);
-  border-radius: 1px;
-  cursor: pointer;
-  margin-right: 7px;
-  margin-left: 12px;
+  .modal-form-checkbox:checked + &::before {
+    background-image: url(../images/svg/check.svg);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+  }
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 7px;
+    margin-left: 12px;
+  }
 }
 
 .checkbox {
@@ -142,8 +141,9 @@
   color: var(--font-color);
   cursor: pointer;
   transition: background var(--timing-function) var(--effect-duration);
-}
-.modal-form-btn:hover,
-.modal-form-btn:focus {
-  background: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    background: var(--accent-color);
+  }
 }

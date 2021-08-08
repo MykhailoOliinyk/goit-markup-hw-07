@@ -13,8 +13,9 @@
   cursor: pointer;
 
   transition: background-color var(--timing-function) var(--effect-duration);
-}
-.button-heroi:hover,
-.button-heroi:focus {
-  background-color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
